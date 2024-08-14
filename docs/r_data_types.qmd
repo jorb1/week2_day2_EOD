@@ -1,0 +1,67 @@
+---
+Title: Week 2 Day 2 EOD
+Author: BJ
+editor_options: 
+  chunk_output_type: console
+---
+
+## Create a Vector
+
+```{r}
+vec_1 <- c(2, 5, 9, 10, 8, 12, 1, 0)
+
+#what class and type does it store?
+class(vec_1)
+typeof(vec_1)
+
+#Access the 3rd element and store
+vec_1_e3 <- vec_1[3]
+vec_1_e3
+
+#Access the 1st element and store
+vec_1_e1 <- vec_1[1]
+vec_1_e1
+
+#Access the 5th through 7th elements and store
+vec_1_e5to7 <- vec_1[5:7]
+vec_1_e5to7
+
+#reassign vec_1 as a character
+is.character(vec_1)
+vec_1_char <- as.character(vec_1)
+is.character(vec_1_char)
+```
+
+```{r}
+#create a second vector ----
+vec_2 <- c(town = "Santa Barbara", location = "Rincon", swell = "south")
+vec_2
+class(vec_2)
+typeof(vec_2)
+
+#what is the length of vec_2? ----
+length(vec_2)
+
+#Access 2nd element ----
+
+vec_2_e2 <- vec_2[2]
+vec_2_e2
+```
+
+## Create a Data Frame
+```{r}
+df_1 <- data.frame(region = c("A", "B", "A", "D"),
+                   species = c("otter", "great white", "sea lion", "gray whale"),
+                   count = c(12, 2, 36, 6))
+df_1
+
+class(df_1)
+
+#find the class of a specific column ----
+class(df_1$species)
+
+#find the maximum value of the count column
+max_count <- max(df_1$count)
+max_count
+```
+
